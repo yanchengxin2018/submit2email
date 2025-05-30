@@ -1,10 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Index</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accezz</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1749d2;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 96vh;
+      text-align: center;
+    }
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 96%;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      font-size: 18px;
+    }
+    .main-text {
+      font-size: 48px;
+      font-weight: bold;
+      max-width: 900px;
+      padding: 40px;
+      border: 1px solid #000;
+      background-color: #1749d2;
+    }
+    .button {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #333;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-主页index
+  <div class="navbar">
+    <div><a href="#">Accezz</a></div>
+    <div><a href="/about">About</a></div>
+  </div>
+
+  <div class="main-text">
+    Building a community for the future generation of art collectors
+  </div>
+
+  <a class="button" href="/form">Get Accezz</a>
 </body>
 </html>
