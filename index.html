@@ -1,72 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accezz</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #1749d2;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 96vh;
-      text-align: center;
-    }
-    .navbar {
-      position: absolute;
-      top: 0;
-      width: 96%;
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      font-size: 18px;
-    }
-    .main-text {
-      font-size: 48px;
-      font-weight: bold;
-      max-width: 900px;
-      padding: 40px;
-      border: 1px solid #000;
-      background-color: #1749d2;
-    }
-    .button {
-      margin-top: 40px;
-      padding: 15px 30px;
-      font-size: 18px;
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .button:hover {
-      background-color: #333;
-    }
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Accezz</title>
+
+    <style>
+
+        #backDiv {
+            position: absolute;
+            width: 99%;
+            left: 0.5%;
+            height: 98%;
+            overflow: hidden;
+        }
+
+        #backImg {
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+
+        #about {
+            position: absolute;
+            left: 90%;
+            top: 5%;
+            width: 7%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #home {
+            position: absolute;
+            left: 80%;
+            top: 5%;
+            width: 7%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #join {
+            position: absolute;
+            left: 44%;
+            top: 67%;
+            width: 12%;
+            height: auto;
+            cursor: pointer;
+        }
+
+    </style>
+
 </head>
 <body>
-  <div class="navbar">
-    <div><a href="#">Accezz</a></div>
-    <div><a href="/about">About</a></div>
-  </div>
 
-  <div class="main-text">
-    Building a community for the future generation of art collectors
-  </div>
+<div id="backDiv">
+    <img src="static/index.jpeg" alt="" id="backImg"/>
 
-  <a class="button" href="/form">Get Accezz</a>
+    <a href="/about">
+        <img src="static/about.png" alt="" id="about"/>
+    </a>
+
+    <img src="static/home.png" alt="" id="home"/>
+
+    <a href="/form">
+        <img src="static/join.png" alt="" id="join"/>
+    </a>
+
+</div>
+
 </body>
 </html>
