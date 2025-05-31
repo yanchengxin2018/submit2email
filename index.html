@@ -65,6 +65,7 @@
 
     </style>
 
+
 </head>
 <body>
 
@@ -72,10 +73,10 @@
     <img src="static/indexBack.jpeg" alt="" id="backImg"/>
 
     <div id="centerImgWrapper">
-            <img src="static/index.jpeg" alt="" id="centerImg"/>
+        <img src="static/index.jpeg" alt="" id="centerImg"/>
     </div>
 
-    <a href="/about">
+    <a href="/about" id="about_link">
         <img src="static/about.png" alt="" id="about"/>
     </a>
 
@@ -86,6 +87,37 @@
     </a>
 
 </div>
+
+<script>
+    function isMobileDevice() {
+        // 检查是否存在触摸事件
+        const hasTouchEvents = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+        // 获取用户代理字符串并转换为小写
+        const userAgent = navigator.userAgent.toLowerCase();
+
+        // 定义常见移动设备的关键字
+        const mobileKeywords = [
+            'android', 'iphone', 'ipad', 'ipod', 'windows phone',
+            'blackberry', 'tablet', 'mobile'
+        ];
+
+        // 检查用户代理字符串中是否包含移动设备关键字
+        const hasMobileKeyword = mobileKeywords.some(keyword => userAgent.includes(keyword));
+
+        // 综合判断是否为移动设备
+        return hasTouchEvents && hasMobileKeyword;
+    }
+
+    window.onload = () => {
+        const isMobile = isMobileDevice();
+        // 如果判断是手机设备就把这个标签中的href改为"/about_wap"<a href="/about" id="about">
+        if (isMobile) {
+            const aboutLink = document.getElementById('about_link');
+            aboutLink.href = "/about_wap";
+        }
+    };
+</script>
 
 </body>
 </html>

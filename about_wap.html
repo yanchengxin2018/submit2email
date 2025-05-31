@@ -17,6 +17,22 @@
         #backImg {
             position: absolute;
             width: 100%;
+            height: 100%;
+        }
+
+        #centerImgWrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #centerImg {
+            width: 100%;
             height: auto;
         }
 
@@ -38,21 +54,30 @@
             cursor: pointer;
         }
 
+        #join {
+            position: absolute;
+            left: 44%;
+            top: 67%;
+            width: 12%;
+            height: auto;
+            cursor: pointer;
+        }
+
     </style>
 
 </head>
 <body>
 
 <div id="backDiv">
-    <img src="static/about_web.jpeg" alt="" id="backImg"/>
+    <img src="static/indexBack.jpeg" alt="" id="backImg"/>
 
-    <a href="/about">
-        <img src="static/about.png" alt="" id="about"/>
-    </a>
+    <div id="centerImgWrapper">
+        <img src="static/about_wap.jpeg" alt="" id="centerImg"/>
+    </div>
 
-    <a href="/">
-        <img src="static/home.png" alt="" id="home"/>
-    </a>
+    <img src="static/about.png" alt="" id="about"/>
+
+    <img src="static/home.png" alt="" id="home"/>
 
 </div>
 
