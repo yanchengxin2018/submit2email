@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choices.js 多选测试</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+</head>
+<body>
+  <h3>选择你喜欢与艺术互动的方式：</h3>
+  <select id="engage_art" name="Favorite ways to engage with art[]" multiple>
+    <option value="Collect art">Collect art</option>
+    <option value="Visit gallery and museum exhibitions">Visit gallery and museum exhibitions</option>
+    <option value="Read and write about art">Read and write about art</option>
+    <option value="Attend live auctions">Attend live auctions</option>
+    <option value="Parties and exhibit openings">Parties and exhibit openings</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const element = document.getElementById('engage_art');
+      if (element) {
+        const choices = new Choices(element, {
+          removeItemButton: true,
+          shouldSort: false
+        });
+      }
+    });
+  </script>
+</body>
+</html>
