@@ -115,27 +115,14 @@
         <textarea name="Recent artwork attention" id="art_attention" rows="4" required></textarea>
 
         <label for="engage_art">What is your favorite way to engage with art?</label>
-{#        <select name="Favorite ways to engage with art[]" id="engage_art" multiple size="6">#}
-{#            <option value="Collect art">Collect art</option>#}
-{#            <option value="Visit gallery and museum exhibitions">Visit gallery and museum exhibitions</option>#}
-{#            <option value="Read and write about art">Read and write about art</option>#}
-{#            <option value="Attend live auctions">Attend live auctions</option>#}
-{#            <option value="Parties and exhibit openings">Parties and exhibit openings</option>#}
-{#            <option value="Other">Other</option>#}
-{#        </select>#}
-
-
-        <select id="engage_art" name="Favorite ways to engage with art[]" multiple>
-  <option value="Collect art">Collect art</option>
-  <option value="Visit gallery and museum exhibitions">Visit gallery and museum exhibitions</option>
-  <option value="Read and write about art">Read and write about art</option>
-  <option value="Attend live auctions">Attend live auctions</option>
-  <option value="Parties and exhibit openings">Parties and exhibit openings</option>
-  <option value="Other">Other</option>
-</select>
-
-
-
+        <select name="Favorite ways to engage with art[]" id="engage_art" multiple size="6">
+            <option value="Collect art">Collect art</option>
+            <option value="Visit gallery and museum exhibitions">Visit gallery and museum exhibitions</option>
+            <option value="Read and write about art">Read and write about art</option>
+            <option value="Attend live auctions">Attend live auctions</option>
+            <option value="Parties and exhibit openings">Parties and exhibit openings</option>
+            <option value="Other">Other</option>
+        </select>
 
         <label for="status">What is your current status?</label>
         <select name="Current status[]" id="status" multiple size="5">
@@ -166,16 +153,6 @@
         for your patience. We look forward to welcoming you to the community soon.
     </p>
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const choices = new Choices('#engage_art', {
-      removeItemButton: true,    // 显示删除按钮
-      shouldSort: false,         // 保持原始选项顺序
-      searchPlaceholderValue: 'Search...',
-      searchEnabled: true,       // 启用搜索
-      placeholder: true
-    });
-  });
-</script>
+
 </body>
 </html>
