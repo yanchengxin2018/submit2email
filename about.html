@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Accezz</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      color: #111;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 700px;
-      margin: auto;
-    }
-    .logo {
-      font-size: 14px;
-      margin-bottom: 40px;
-    }
-    h1 {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 18px;
-      font-weight: normal;
-      color: gray;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Accezz</title>
+
+    <style>
+
+        #backDiv {
+            position: absolute;
+            width: 98%;
+            left: 1%;
+            height: 98%;
+            overflow: hidden;
+        }
+
+        #backImg {
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+
+        #about {
+            position: absolute;
+            left: 90%;
+            top: 5%;
+            width: 7%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #home {
+            position: absolute;
+            left: 80%;
+            top: 5%;
+            width: 7%;
+            height: auto;
+            cursor: pointer;
+        }
+
+    </style>
+
 </head>
 <body>
-  <div class="container">
-    <div class="logo">accezzed</div>
-    <h1>About</h1>
-    <h2>Subheading for description or instructions</h2>
-    <p>Body text for your whole article or post. We’ll put in some lorem ipsum to show how a filled-out page might look:</p>
-    <p>Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation exquisite perfect nostrud nisi intricate Content. Qui international first-class nulla ut. Punctual adipiscing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. Zürich sleepy perfect consectetur.</p>
-  </div>
+
+<div id="backDiv">
+    <img src="static/about_web.jpeg" alt="" id="backImg"/>
+
+    <a href="/about">
+        <img src="static/about.png" alt="" id="about"/>
+    </a>
+
+    <a href="/">
+        <img src="static/home.png" alt="" id="home"/>
+    </a>
+
+</div>
+
 </body>
 </html>
