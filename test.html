@@ -1,164 +1,121 @@
-<!-- Updated Membership Form with Checkbox Lists Instead of <select multiple> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Membership Form</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Access - Art Community</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
         }
 
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 40px 20px;
-            background-color: #fff;
-        }
-
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 20px;
-            margin-top: 30px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-        }
-
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        input[type="text"], input[type="email"], select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        input[type="file"] {
-            padding: 3px;
-        }
-
-        input[type="submit"], button {
-            margin-top: 30px;
-            padding: 12px 20px;
-            background-color: black;
+        body {
+            background-color: #0000cc;
             color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
+            font-family: 'Garamond', serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 300%;
         }
 
-        input[type="submit"]:hover, button:hover {
-            background-color: #333;
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+            font-size: 1.2em;
+            background-color: #0000cc;
         }
 
-        .note {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
         }
 
-        .checkbox-group {
-            margin-top: 10px;
+        .main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
         }
 
-        .checkbox-group label {
-            font-weight: normal;
-            margin-top: 8px;
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .section {
+            padding: 20px;
+        }
+
+        .quote {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        i {
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>Membership Form</h1>
-    <form action="https://formsubmit.co/theaccezz@gmail.com" method="POST" enctype="multipart/form-data">
-
-        <h2>Basic Info</h2>
-        <label for="first_name">First name</label>
-        <input type="text" name="First name" id="first_name" required>
-
-        <label for="last_name">Last name</label>
-        <input type="text" name="Last name" id="last_name" required>
-
-        <label for="gender">Gender</label>
-        <input type="text" name="Gender" id="gender" required>
-
-        <label for="dob">Date of birth</label>
-        <input type="text" name="Date of birth" id="dob" required>
-
-        <label for="location">Location</label>
-        <input type="text" name="Location" id="location" required>
-
-        <label for="email">Email</label>
-        <input type="email" name="Email" id="email" required>
-
-        <label for="instagram">Instagram handle</label>
-        <input type="text" name="Instagram handle" id="instagram">
-
-        <label for="resume">Resume</label>
-        <input type="file" name="Resume" id="resume" accept=".pdf,.doc,.docx">
-
-        <label for="referral">How did you hear about Accezz</label>
-        <select name="How did you hear about Accezz" id="referral" required>
-            <option value="Social media">Social media</option>
-            <option value="Word of mouth">Word of mouth</option>
-            <option value="Referral">Referral (Please provide name)</option>
-            <option value="Other">Other</option>
-        </select>
-
-        <h2>Details</h2>
-        <label for="art_attention">Which work of art has recently captured your attention? And why?</label>
-        <textarea name="Recent artwork attention" id="art_attention" rows="4" required></textarea>
-
-        <label>What is your favorite way to engage with art?</label>
-        <div class="checkbox-group">
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Collect art"> Collect art</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Visit gallery and museum exhibitions"> Visit gallery and museum exhibitions</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Read and write about art"> Read and write about art</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Attend live auctions"> Attend live auctions</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Parties and exhibit openings"> Parties and exhibit openings</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Other"> Other</label>
-        </div>
-
-        <label>What is your current status?</label>
-        <div class="checkbox-group">
-            <label><input type="checkbox" name="Current status[]" value="I have an established collection"> I have an established collection</label>
-            <label><input type="checkbox" name="Current status[]" value="I’ve collected 5 or more works"> I’ve collected 5 or more works</label>
-            <label><input type="checkbox" name="Current status[]" value="I’ve just started my collection"> I’ve just started my collection</label>
-            <label><input type="checkbox" name="Current status[]" value="I want to start but don’t know where to begin"> I want to start but don’t know where to begin</label>
-            <label><input type="checkbox" name="Current status[]" value="I’ve never considered collecting until now"> I’ve never considered collecting until now</label>
-        </div>
-
-        <label for="why_join">Why do you want to join?</label>
-        <textarea name="Why join" id="why_join" rows="4" required></textarea>
-
-        <label for="expectations">What are your expectations from this community?</label>
-        <textarea name="Expectations" id="expectations" rows="4" required></textarea>
-
-        <label for="other_info">Anything else you would like us to know?</label>
-        <textarea name="Additional info (optional)" id="other_info" rows="3"></textarea>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <p class="note">
-        You can expect to hear from us in a few weeks. Please note that there may be a delay in our response. Thank you
-        for your patience. We look forward to welcoming you to the community soon.
-    </p>
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
 </div>
+
+<div class="main">
+    <div class="content">
+        <div class="section">
+            <div class="quote">“Access”</div>
+            <p>
+                is a term frequently used in the art world. For many—especially those in their 20s and 30s—
+                hurdles like knowledge, finances and taste can make acquiring art feel unattainable or inaccessible.
+            </p>
+        </div>
+
+        <div class="section">
+            <p>
+                Currently, art is primarily collected by those who are older and have the financial means, time and
+                resources.
+            </p>
+            <p>
+                There is limited space that caters to collectors in their 20s and 30s due to obvious reasons, but this
+                is changing.
+                Future generations of tastemakers will reshape the art world.
+            </p>
+            <p>
+                We are cultivating a community of people who love art and share an interest in collecting. Whether you
+                have already
+                begun your art collecting journey or may start in 10 to 20 years, let’s embark on this adventure
+                together.
+            </p>
+        </div>
+
+        <div class="section">
+            <p><i>We invite you to join us if you find yourself:</i></p>
+            <ul>
+                <li>a) hoping to share and discuss the art you want to collect</li>
+                <li>b) wanting to exist in the art world in new ways</li>
+                <li>c) becoming curious and eager to explore but not quite sure where to start</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="home"></div>
+<div id="about"></div>
 </body>
 </html>
