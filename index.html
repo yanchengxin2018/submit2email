@@ -54,7 +54,23 @@
             cursor: pointer;
         }
 
-        #join {
+        .join {
+            position: absolute;
+            width: 100%;
+            top: 65%;
+        }
+
+        {#让join-wap所属图片左右居中 join-wap位于join所属的div中#}
+        .join-wap {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .join-web {
             position: absolute;
             left: 44%;
             top: 67%;
@@ -62,6 +78,7 @@
             height: auto;
             cursor: pointer;
         }
+
 
     </style>
 
@@ -76,45 +93,42 @@
         <img src="static/index.jpeg" alt="" id="centerImg"/>
     </div>
 
-    <a href="/about" id="about_link">
+    <a href="#" id="about_link">
         <img src="static/about.png" alt="" id="about"/>
     </a>
 
     <img src="static/home.png" alt="" id="home"/>
 
-    <a href="/form">
-        <img src="static/join.png" alt="" id="join"/>
-    </a>
+    <div class="join">
+        <a href="/form">
+            <img src="static/join.png" alt="" class="join-web" id="join_img"/>
+        </a>
+    </div>
+
 
 </div>
 
 <script>
     function isMobileDevice() {
-        // 检查是否存在触摸事件
         const hasTouchEvents = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-        // 获取用户代理字符串并转换为小写
         const userAgent = navigator.userAgent.toLowerCase();
-
-        // 定义常见移动设备的关键字
         const mobileKeywords = [
             'android', 'iphone', 'ipad', 'ipod', 'windows phone',
             'blackberry', 'tablet', 'mobile'
         ];
-
-        // 检查用户代理字符串中是否包含移动设备关键字
         const hasMobileKeyword = mobileKeywords.some(keyword => userAgent.includes(keyword));
-
-        // 综合判断是否为移动设备
         return hasTouchEvents && hasMobileKeyword;
     }
 
     window.onload = () => {
         const isMobile = isMobileDevice();
-        // 如果判断是手机设备就把这个标签中的href改为"/about_wap"<a href="/about" id="about">
+        const aboutLink = document.getElementById('about_link');
+        const joinImg = document.getElementById('join_img');
         if (isMobile) {
-            const aboutLink = document.getElementById('about_link');
             aboutLink.href = "/about_wap";
+            joinImg.className = 'join-wap';
+        } else {
+            aboutLink.href = "/about";
         }
     };
 </script>
