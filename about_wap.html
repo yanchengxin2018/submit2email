@@ -2,85 +2,129 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Accezz</title>
-
-    <style>
-
-        #backDiv {
-            position: absolute;
-            width: 98%;
-            left: 1%;
-            height: 98%;
-            overflow: hidden;
-        }
-
-        #backImg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        #centerImgWrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #centerImg {
-            width: 100%;
-            height: auto;
-        }
-
-        #about {
-            position: absolute;
-            left: 90%;
-            top: 5%;
-            width: 7%;
-            height: auto;
-            cursor: pointer;
-        }
-
-        #home {
-            position: absolute;
-            left: 80%;
-            top: 5%;
-            width: 7%;
-            height: auto;
-            cursor: pointer;
-        }
-
-        #join {
-            position: absolute;
-            left: 44%;
-            top: 67%;
-            width: 12%;
-            height: auto;
-            cursor: pointer;
-        }
-
-    </style>
-
+    <title>Title</title>
 </head>
-<body>
+<body style="background-image:url('static/back.png')">
 
-<div id="backDiv">
-    <img src="static/indexBack.jpeg" alt="" id="backImg"/>
 
-    <div id="centerImgWrapper">
-        <img src="static/about_wap.jpeg" alt="" id="centerImg"/>
+<div
+        style="
+        position: relative;
+        height: 80vh;
+">
+
+    <div style="
+        width: 100%;
+        top:5%;
+        position: absolute;
+        font-size: 300%;
+    ">
+
+        <div
+                onclick="onClickHome()"
+                style="
+                    position: absolute;
+                    transform: translateX(-50%) translateY(-50%);
+                    display: inline-block;
+                    color: #ffffff;
+                    left:10%;
+                    font-family: Garamond,serif;
+                    font-weight: bold;
+        ">
+            Home
+            <a href="/" id="home"></a>
+        </div>
+
+        <div
+                onclick="onClickAbout()"
+                style="
+                    position: absolute;
+                    transform: translateX(50%) translateY(-50%);
+                    display: inline-block;
+                    color: #ffffff;
+                    right: 10%;
+                    font-family: Garamond,serif;
+                    font-weight: bold;
+        ">
+            About
+        </div>
+
     </div>
 
-    <img src="static/about.png" alt="" id="about"/>
 
-    <a href="/">
-        <img src="static/home.png" alt="" id="home"/>
-    </a>
+    <img src="static/logo2.png" alt="logo" style="
+        position: absolute;
+        top:20%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 50%;
+        height: auto;
+    ">
+
+    <div style="
+        width: 80%;
+        left: 10%;
+        top:30%;
+        position: absolute;
+        text-align: center;
+        color: #ffffff;
+        font-size: 300%;
+        font-family: Garamond,serif;
+        font-weight: bold;
+    ">
+        Is a term frequently used in the art world. For many—especially those in their 20s
+        and 30s—hurdles like knowledge, finances and taste can make acquiring art feel
+        unattainable or inaccessible
+        <br/>
+        <br/>
+        Currently, art is primarily collected by those who are older and have the financial
+        means, time and resources
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        There is limited space that caters to collectors in their 20s and 30s due to obvious
+        reasons, but this is changing.
+        Future generations of tastemakers will reshape the art world
+        <br/>
+        <br/>
+        We are cultivating a community of people who love art and share an interest in<br/>
+        collecting. Whether you have already begun your art collecting journey or may start<br/>
+        in 10 to 20 years, let’s embark on this adventure together<br/>
+        <br/>
+        <br/>
+        <div style="
+            text-align: left;
+            font-style: italic;
+            font-weight: normal;
+        ">
+            We invite you to join us if you find yourself:<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;a) hoping to share and discuss the art you want to collect<br/>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;b) wanting to exist in the art world in new ways<br/>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;c) becoming curious and eager to explore but not quite sure where to start<br/>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+
 </div>
 
+
+<script>
+    function onClickAbout() {
+    }
+
+    function onClickHome() {
+        document.getElementById('home').click();
+    }
+
+
+</script>
 </body>
 </html>
