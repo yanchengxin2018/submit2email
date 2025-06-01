@@ -8,9 +8,9 @@
 
 
 <div
-    style="
+        style="
         position: relative;
-        height: 100vh;
+        height: 80vh;
 ">
 
     <div style="
@@ -33,9 +33,9 @@
         </div>
 
         <div
-            onclick="onClickAbout()"
+                onclick="onClickAbout()"
 
-            style="
+                style="
             position: absolute;
             transform: translateX(-50%) translateY(-50%);
             display: inline-block;
@@ -65,29 +65,59 @@
         top:70%;
         position: absolute;
     ">
-        <div style="
-            position: absolute;
-            font-size: 400%;
-            transform: translateX(-50%) translateY(-50%);
-            background-color: #ffffff;
-            display: inline-block;
-            border-radius: 999px;
-            padding: 10px 80px;
-            color: #0549a1;
-            left:50%;
-            font-family: Garamond,serif;
-            font-weight: bold;
+        <div
+            onclick="onClickJoin()"
+            style="
+                position: absolute;
+                font-size: 400%;
+                transform: translateX(-50%) translateY(-50%);
+                background-color: #ffffff;
+                display: inline-block;
+                border-radius: 999px;
+                padding: 10px 80px;
+                color: #0549a1;
+                left:50%;
+                font-family: Garamond,serif;
+                font-weight: bold;
             ">
             Join
+            <a href="/form" id="join"></a>
         </div>
     </div>
 
 
 </div>
+
+<div style="
+    position:absolute;
+    border-top: #ffffff 4px solid;
+    width: 90%;
+    left: 5%;
+    bottom: 30px;
+">
+    <div style="
+        font-size: 300%;
+        color: #ffffff;
+        font-family: Garamond,serif;
+        margin-top: 10px;
+        margin-left: 20px;
+    ">
+        Terms and Conditions<br/>
+        Privacy & Data Protection Policy<br/>
+        Community guidelines<br/>
+        Accezz All rights reserved 2025<br/>
+    </div>
+</div>
+
+
 <script>
     function onClickAbout() {
         const aboutObj = document.getElementById('about_a');
         aboutObj.click();
+    }
+
+    function onClickJoin() {
+        document.getElementById('join').click();
     }
 
 </script>
