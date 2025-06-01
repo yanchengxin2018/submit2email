@@ -1,121 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Access - Art Community</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #0000cc;
-            color: white;
-            font-family: 'Garamond', serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            font-size: 300%;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: flex-end;
-            padding: 20px;
-            font-size: 1.2em;
-            background-color: #0000cc;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        .main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-        }
-
-        .content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .section {
-            padding: 20px;
-        }
-
-        .quote {
-            font-size: 2em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        i {
-            font-style: italic;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
-<body>
-<div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-</div>
+<body style="background-image:url('static/back.png')">
 
-<div class="main">
-    <div class="content">
-        <div class="section">
-            <div class="quote">“Access”</div>
-            <p>
-                is a term frequently used in the art world. For many—especially those in their 20s and 30s—
-                hurdles like knowledge, finances and taste can make acquiring art feel unattainable or inaccessible.
-            </p>
+
+<div
+    style="
+        position: relative;
+        height: 100vh;
+">
+
+    <div style="
+        width: 100%;
+        top:10%;
+        position: absolute;
+        font-size: 400%;
+    ">
+
+        <div style="
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            color: #ffffff;
+            left:25%;
+            font-family: Garamond,serif;
+            font-weight: bold;
+        ">
+            Home
         </div>
 
-        <div class="section">
-            <p>
-                Currently, art is primarily collected by those who are older and have the financial means, time and
-                resources.
-            </p>
-            <p>
-                There is limited space that caters to collectors in their 20s and 30s due to obvious reasons, but this
-                is changing.
-                Future generations of tastemakers will reshape the art world.
-            </p>
-            <p>
-                We are cultivating a community of people who love art and share an interest in collecting. Whether you
-                have already
-                begun your art collecting journey or may start in 10 to 20 years, let’s embark on this adventure
-                together.
-            </p>
+        <div
+            onclick="onClickAbout()"
+
+            style="
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            color: #ffffff;
+            left:75%;
+            font-family: Garamond,serif;
+            font-weight: bold;
+        ">
+            About
+            <a href="/about_wap" id="about_a"></a>
         </div>
 
-        <div class="section">
-            <p><i>We invite you to join us if you find yourself:</i></p>
-            <ul>
-                <li>a) hoping to share and discuss the art you want to collect</li>
-                <li>b) wanting to exist in the art world in new ways</li>
-                <li>c) becoming curious and eager to explore but not quite sure where to start</li>
-            </ul>
+    </div>
+
+
+    <img src="static/logo.png" alt="logo" style="
+        position: absolute;
+        top:40%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 50%;
+        height: auto;
+    ">
+
+    <div style="
+        width: 100%;
+        top:70%;
+        position: absolute;
+    ">
+        <div style="
+            position: absolute;
+            font-size: 400%;
+            transform: translateX(-50%) translateY(-50%);
+            background-color: #ffffff;
+            display: inline-block;
+            border-radius: 999px;
+            padding: 10px 80px;
+            color: #0549a1;
+            left:50%;
+            font-family: Garamond,serif;
+            font-weight: bold;
+            ">
+            Join
         </div>
     </div>
-</div>
 
-<div id="home"></div>
-<div id="about"></div>
+
+</div>
+<script>
+    function onClickAbout() {
+        const aboutObj = document.getElementById('about_a');
+        aboutObj.click();
+    }
+
+</script>
 </body>
 </html>
