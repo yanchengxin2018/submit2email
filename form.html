@@ -98,31 +98,34 @@
     <form action="https://formsubmit.co/theaccezz@gmail.com" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_next" value="https://www.theaccezz.com/thanks">
         <h2>Basic Info</h2>
-        <label for="first_name">First name</label>
+        <label for="first_name">First name <span style="color: red">*</span></label>
         <input type="text" name="First name" id="first_name" required>
 
-        <label for="last_name">Last name</label>
+        <label for="last_name">Last name <span style="color: red">*</span></label>
         <input type="text" name="Last name" id="last_name" required>
 
-        <label for="gender">Gender</label>
+        <label for="gender">Gender <span style="color: red">*</span></label>
         <input type="text" name="Gender" id="gender" required>
 
-        <label for="dob">Date of birth</label>
+        <label for="dob">Date of birth <span style="color: red">*</span></label>
         <input type="text" name="Date of birth" id="dob" required>
 
-        <label for="location">Location</label>
+        <label for="age">Age <span style="color: red">*</span></label>
+        <input type="text" name="age" id="age" required>
+
+        <label for="location">Location <span style="color: red">*</span></label>
         <input type="text" name="Location" id="location" required>
 
-        <label for="email">Email</label>
+        <label for="email">Email <span style="color: red">*</span></label>
         <input type="email" name="Email" id="email" required>
 
-        <label for="instagram">Instagram handle</label>
-        <input type="text" name="Instagram handle" id="instagram">
+        <label for="instagram">Instagram handle <span style="color: red">*</span></label>
+        <input type="text" name="Instagram handle" id="instagram" required>
 
-        <label for="resume">Resume</label>
-        <input type="file" name="Resume" id="resume" accept=".pdf,.doc,.docx">
+        <label for="resume">Resume <span style="color: red">*</span></label>
+        <input type="file" name="Resume" id="resume" accept=".pdf,.doc,.docx" required>
 
-        <label>How did you hear about Accezz</label>
+        <label>How did you hear about Accezz <span style="color: red">*</span></label>
         <div class="radio-group">
             <label><input type="radio" name="How did you hear about Accezz" value="Social media" checked> Social
                 media</label>
@@ -132,11 +135,11 @@
             <label><input type="radio" name="How did you hear about Accezz" value="Other"> Other</label>
         </div>
 
-        <h2>Details</h2>
+        <h2>Details <span style="color: red">*</span></h2>
         <label for="art_attention">Which work of art has recently captured your attention? And why?</label>
         <textarea name="Recent artwork attention" id="art_attention" rows="4" required></textarea>
 
-        <label>What is your favorite way to engage with art?</label>
+        <label>What is your favorite way to engage with art? (You can choose multiple options.)</label>
         <div class="checkbox-group">
             <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Collect art"> Collect
                 art</label>
@@ -151,7 +154,7 @@
             <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Other"> Other</label>
         </div>
 
-        <label>What is your current status?</label>
+        <label>What is your current status? (You can choose multiple options.)</label>
         <div class="checkbox-group">
             <label><input type="checkbox" name="Current status[]" value="I have an established collection"> I have an
                 established collection</label>
@@ -165,13 +168,13 @@
                 I’ve never considered collecting until now</label>
         </div>
 
-        <label for="why_join">Why do you want to join?</label>
+        <label for="why_join">Why do you want to join? <span style="color: red">*</span></label>
         <textarea name="Why join" id="why_join" rows="4" required></textarea>
 
-        <label for="expectations">What are your expectations from this community?</label>
+        <label for="expectations">What are your expectations from this community? <span style="color: red">*</span></label>
         <textarea name="Expectations" id="expectations" rows="4" required></textarea>
 
-        <label for="other_info">Anything else you would like us to know?</label>
+        <label for="other_info">Anything else you would like us to know?(optional)</label>
         <textarea name="Additional info (optional)" id="other_info" rows="3"></textarea>
 
         <button type="submit">Submit</button>
