@@ -95,7 +95,7 @@
 
     <h1>Membership Form</h1>
     <form action="https://formsubmit.co/theaccezz@gmail.com" method="POST" enctype="multipart/form-data">
-
+        <input type="hidden" name="_next" value="https://www.theaccezz.com/thanks">
         <h2>Basic Info</h2>
         <label for="first_name">First name</label>
         <input type="text" name="First name" id="first_name" required>
@@ -121,13 +121,15 @@
         <label for="resume">Resume</label>
         <input type="file" name="Resume" id="resume" accept=".pdf,.doc,.docx">
 
-        <label for="referral">How did you hear about Accezz</label>
-        <select name="How did you hear about Accezz" id="referral" required>
-            <option value="Social media">Social media</option>
-            <option value="Word of mouth">Word of mouth</option>
-            <option value="Referral">Referral (Please provide name)</option>
-            <option value="Other">Other</option>
-        </select>
+        <label>How did you hear about Accezz</label>
+        <div class="radio-group">
+            <label><input type="radio" name="How did you hear about Accezz" value="Social media" checked> Social
+                media</label>
+            <label><input type="radio" name="How did you hear about Accezz" value="Word of mouth"> Word of mouth</label>
+            <label><input type="radio" name="How did you hear about Accezz" value="Referral"> Referral (Please provide
+                name)</label>
+            <label><input type="radio" name="How did you hear about Accezz" value="Other"> Other</label>
+        </div>
 
         <h2>Details</h2>
         <label for="art_attention">Which work of art has recently captured your attention? And why?</label>
