@@ -95,87 +95,84 @@
     </nav>
 
     <h1>Membership Form</h1>
-    <form action="https://formsubmit.co/theaccezz@gmail.com" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_next" value="https://www.theaccezz.com/thanks">
+    <form action="https://console.theaccezz.com/api_v1/form/" method="POST" enctype="multipart/form-data">
         <h2>Basic Info</h2>
         <label for="first_name">First name <span style="color: red">*</span></label>
-        <input type="text" name="First name" id="first_name" required>
+        <input type="text" name="first_name" id="first_name" required>
 
         <label for="last_name">Last name <span style="color: red">*</span></label>
-        <input type="text" name="Last name" id="last_name" required>
+        <input type="text" name="last_name" id="last_name" required>
 
         <label for="gender">Gender <span style="color: red">*</span></label>
-        <input type="text" name="Gender" id="gender" required>
+        <input type="text" name="gender" id="gender" required>
 
         <label for="dob">Date of birth <span style="color: red">*</span></label>
-        <input type="text" name="Date of birth" id="dob" required>
+        <input type="date" name="date_of_birth" id="dob" required>
 
-        <label for="age">Age <span style="color: red">*</span></label>
-        <input type="text" name="age" id="age" required>
 
         <label for="location">Location <span style="color: red">*</span></label>
-        <input type="text" name="Location" id="location" required>
+        <input type="text" name="location" id="location" required>
 
         <label for="email">Email <span style="color: red">*</span></label>
-        <input type="email" name="Email" id="email" required>
+        <input type="email" name="email" id="email" required>
 
         <label for="instagram">Instagram handle <span style="color: red">*</span></label>
-        <input type="text" name="Instagram handle" id="instagram" required>
+        <input type="text" name="instagram" id="instagram" required>
 
         <label for="resume">Resume <span style="color: red">*</span></label>
-        <input type="file" name="Resume" id="resume" accept=".pdf,.doc,.docx" required>
+        <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx" required>
 
         <label>How did you hear about Accezz <span style="color: red">*</span></label>
         <div class="radio-group">
-            <label><input type="radio" name="How did you hear about Accezz" value="Social media" checked> Social
+            <label><input type="radio" name="how_did_you_hear" value="Social media" checked> Social
                 media</label>
-            <label><input type="radio" name="How did you hear about Accezz" value="Word of mouth"> Word of mouth</label>
-            <label><input type="radio" name="How did you hear about Accezz" value="Referral"> Referral (Please provide
+            <label><input type="radio" name="how_did_you_hear" value="Word of mouth"> Word of mouth</label>
+            <label><input type="radio" name="how_did_you_hear" value="Referral"> Referral (Please provide
                 name)</label>
-            <label><input type="radio" name="How did you hear about Accezz" value="Other"> Other</label>
+            <label><input type="radio" name="how_did_you_hear" value="Other"> Other</label>
         </div>
 
         <h2>Details <span style="color: red">*</span></h2>
         <label for="art_attention">Which work of art has recently captured your attention? And why?</label>
-        <textarea name="Recent artwork attention" id="art_attention" rows="4" required></textarea>
+        <textarea name="art_attention" id="art_attention" rows="4" required></textarea>
 
         <label>What is your favorite way to engage with art? (You can choose multiple options.)</label>
         <div class="checkbox-group">
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Collect art"> Collect
+            <label><input type="checkbox" name="favorite_ways[]" value="Collect art"> Collect
                 art</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]"
+            <label><input type="checkbox" name="favorite_ways[]"
                           value="Visit gallery and museum exhibitions"> Visit gallery and museum exhibitions</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Read and write about art">
+            <label><input type="checkbox" name="favorite_ways[]" value="Read and write about art">
                 Read and write about art</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Attend live auctions"> Attend
+            <label><input type="checkbox" name="favorite_ways[]" value="Attend live auctions"> Attend
                 live auctions</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]"
+            <label><input type="checkbox" name="favorite_ways[]"
                           value="Parties and exhibit openings"> Parties and exhibit openings</label>
-            <label><input type="checkbox" name="Favorite ways to engage with art[]" value="Other"> Other</label>
+            <label><input type="checkbox" name="favorite_ways[]" value="Other"> Other</label>
         </div>
 
         <label>What is your current status? (You can choose multiple options.)</label>
         <div class="checkbox-group">
-            <label><input type="checkbox" name="Current status[]" value="I have an established collection"> I have an
+            <label><input type="checkbox" name="current_status[]" value="I have an established collection"> I have an
                 established collection</label>
-            <label><input type="checkbox" name="Current status[]" value="I’ve collected 5 or more works"> I’ve collected
+            <label><input type="checkbox" name="current_status[]" value="I’ve collected 5 or more works"> I’ve collected
                 5 or more works</label>
-            <label><input type="checkbox" name="Current status[]" value="I’ve just started my collection"> I’ve just
+            <label><input type="checkbox" name="current_status[]" value="I’ve just started my collection"> I’ve just
                 started my collection</label>
-            <label><input type="checkbox" name="Current status[]" value="I want to start but don’t know where to begin">
+            <label><input type="checkbox" name="current_status[]" value="I want to start but don’t know where to begin">
                 I want to start but don’t know where to begin</label>
-            <label><input type="checkbox" name="Current status[]" value="I’ve never considered collecting until now">
+            <label><input type="checkbox" name="current_status[]" value="I’ve never considered collecting until now">
                 I’ve never considered collecting until now</label>
         </div>
 
         <label for="why_join">Why do you want to join? <span style="color: red">*</span></label>
-        <textarea name="Why join" id="why_join" rows="4" required></textarea>
+        <textarea name="why_join" id="why_join" rows="4" required></textarea>
 
         <label for="expectations">What are your expectations from this community? <span style="color: red">*</span></label>
-        <textarea name="Expectations" id="expectations" rows="4" required></textarea>
+        <textarea name="expectations" id="expectations" rows="4" required></textarea>
 
         <label for="other_info">Anything else you would like us to know?(optional)</label>
-        <textarea name="Additional info (optional)" id="other_info" rows="3"></textarea>
+        <textarea name="additional_info" id="other_info" rows="3"></textarea>
 
         <button type="submit">Submit</button>
     </form>
