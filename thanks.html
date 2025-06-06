@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Thanks</title>
+    <style>
+        .text_pc {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            font-size: 100%;
+        }
+
+        .text_mb {
+            position: absolute;
+            text-align: center;
+            left: 10%;
+            width: 80%;
+            font-size: 300%;
+        }
+    </style>
 </head>
 <body style="background-image:url('static/back.png')">
 
@@ -14,17 +31,43 @@
             width: 100%;
 ">
     <div
-            style="
-                position: absolute;
-                text-align: center;
-                left: 50%;
-                transform: translateY(-50%) translateX(-50%);
-    ">
-        You can expect to hear from us in a few weeks. Please note that there may be a delay in our response. Thank you
-        for your patience. We look forward to welcoming you to the community soon.
+            id="thanks"
+            class="text_pc"
+    >
+        You can expect to hear from us in a few weeks.
+        Please note that there may be a delay in our response.
+        Thank you for your patience.
+        We look forward to welcoming you to the community soon.
     </div>
 
 </div>
+
+<script>
+    function isMobileDevice() {
+        const hasTouchEvents = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        const userAgent = navigator.userAgent.toLowerCase();
+        const mobileKeywords = [
+            'android', 'iphone', 'ipad', 'ipod', 'windows phone',
+            'blackberry', 'tablet', 'mobile'
+        ];
+        const hasMobileKeyword = mobileKeywords.some(keyword => userAgent.includes(keyword));
+        return hasTouchEvents && hasMobileKeyword;
+    }
+
+    function setTextSize() {
+        const isMobile = isMobileDevice();
+        if (!isMobile) return;
+        // 修改id="thanks" 的div 的class 为text_mb
+        const thanksElement = document.getElementById('thanks');
+        thanksElement.classList.remove('text_pc');
+        thanksElement.classList.add('text_mb');
+
+    }
+
+    window.onload = () => {
+        setTextSize();
+    };
+</script>
 
 </body>
 </html>
