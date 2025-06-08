@@ -25,47 +25,48 @@
 
 <div style="
         width: 100%;
-        top:10%;
+        top:5%;
         position: absolute;
-        font-size: 150%;
+        font-size: 250%;
     ">
 
-    <div style="
-            position: absolute;
-            transform: translateX(-50%) translateY(-50%);
-            display: inline-block;
-            color: #ffffff;
-            left:75%;
-            font-family: Garamond,serif;
-            font-weight: bold;
+        <div
+                onclick="onClickHome()"
+                style="
+                    position: absolute;
+                    transform: translateX(-50%) translateY(-50%);
+                    display: inline-block;
+                    color: #ffffff;
+                    left:25%;
+                    font-family: Garamond,serif;
+                    font-weight: bold;
         ">
-        Home
-    </div>
+            Home
+            <a href="/" id="home"></a>
+        </div>
 
-    <div
-            onclick="onClickAbout()"
-            style="
-                position: absolute;
-                transform: translateX(-50%) translateY(-50%);
-                display: inline-block;
-                color: #ffffff;
-                left:85%;
-                font-family: Garamond,serif;
-                font-weight: bold;
-                cursor: pointer;
+        <div
+                onclick="onClickAbout()"
+                style="
+                    position: absolute;
+                    transform: translateX(50%) translateY(-50%);
+                    display: inline-block;
+                    color: #ffffff;
+                    right: 25%;
+                    font-family: Garamond,serif;
+                    font-weight: bold;
         ">
-        About
-        <a href="/about" id="about_a"></a>
-    </div>
+            About
+        </div>
 
-</div>
+    </div>
 
 
 <div
         style="
             color: #ffffff;
             position: absolute;
-            top:50%;
+            top:25%;
             transform:  translateY(-50%);
             width: 100%;
             font-size: 150%;
@@ -83,7 +84,7 @@
     </div>
 
 </div>
-<a href="/thanks_wap" id="jump"></a>
+
 <script>
     function isMobileDevice() {
         const hasTouchEvents = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -116,15 +117,8 @@
         thanksElement.classList.add('text_mb');
 
     }
-    function toMobileThanks() {
-        const isMobile = isMobileDevice();
-        if (!isMobile) return;
-        document.getElementById('jump').click();
-    }
-
 
     window.onload = () => {
-         toMobileThanks();
         setTextSize();
     };
 </script>
