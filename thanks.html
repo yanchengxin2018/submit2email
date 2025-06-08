@@ -30,7 +30,9 @@
         font-size: 100%;
     ">
 
-    <div style="
+    <div
+            onclick="onClickHome()"
+            style="
             position: absolute;
             transform: translateX(-50%) translateY(-50%);
             display: inline-block;
@@ -38,8 +40,10 @@
             left:75%;
             font-family: Garamond,serif;
             font-weight: bold;
+            cursor: pointer;
         ">
         Home
+        <a href="/" id="home_a"></a>
     </div>
 
     <div
@@ -93,6 +97,17 @@
         const hasMobileKeyword = mobileKeywords.some(keyword => userAgent.includes(keyword));
         return hasTouchEvents && hasMobileKeyword;
     }
+
+    function onClickAbout() {
+        const aboutObj = document.getElementById('about_a');
+        aboutObj.click();
+    }
+
+    function onClickHome() {
+        const homeObj = document.getElementById('home_a');
+        homeObj.click();
+    }
+
 
     function setTextSize() {
         const isMobile = isMobileDevice();
