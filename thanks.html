@@ -23,13 +23,53 @@
 </head>
 <body style="background-image:url('static/back.png')">
 
+<div style="
+        width: 100%;
+        top:10%;
+        position: absolute;
+        font-size: 100%;
+    ">
+
+    <div style="
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%);
+            display: inline-block;
+            color: #ffffff;
+            left:75%;
+            font-family: Garamond,serif;
+            font-weight: bold;
+        ">
+        Home
+    </div>
+
+    <div
+            onclick="onClickAbout()"
+            style="
+                position: absolute;
+                transform: translateX(-50%) translateY(-50%);
+                display: inline-block;
+                color: #ffffff;
+                left:85%;
+                font-family: Garamond,serif;
+                font-weight: bold;
+                cursor: pointer;
+        ">
+        About
+        <a href="/about" id="about_a"></a>
+    </div>
+
+</div>
+
+
 <div
         style="
             color: #ffffff;
             position: absolute;
             top:50%;
             width: 100%;
+            font-size: 150%;
 ">
+
     <div
             id="thanks"
             class="text_pc"

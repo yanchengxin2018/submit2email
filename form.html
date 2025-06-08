@@ -89,7 +89,7 @@
 
 <body>
 <div class="container">
-    <nav style="padding: 20px; background-color: #200dff; text-align: center;font-size: 150%;">
+    <nav style="padding: 20px; background-color: #200dff; text-align: center;font-size: 120%;">
         <a href="/" style="margin-right: 20%; text-decoration: none; color: #ffffff;" class="text-home">Home</a>
         <a href="/about" style="text-decoration: none; color: #ffffff;" class="text-home">About</a>
     </nav>
@@ -151,17 +151,17 @@
             <label><input type="checkbox" name="favorite_ways[]" value="Other"> Other</label>
         </div>
 
-        <label>What is your current status? (You can choose multiple options.)</label>
+        <label>What is your current status?</label>
         <div class="checkbox-group">
-            <label><input type="checkbox" name="current_status[]" value="I have an established collection"> I have an
+            <label><input type="radio" name="current_status" value="I have an established collection"> I have an
                 established collection</label>
-            <label><input type="checkbox" name="current_status[]" value="I’ve collected 5 or more works"> I’ve collected
+            <label><input type="radio" name="current_status" value="I’ve collected 5 or more works"> I’ve collected
                 5 or more works</label>
-            <label><input type="checkbox" name="current_status[]" value="I’ve just started my collection"> I’ve just
+            <label><input type="radio" name="current_status" value="I’ve just started my collection"> I’ve just
                 started my collection</label>
-            <label><input type="checkbox" name="current_status[]" value="I want to start but don’t know where to begin">
+            <label><input type="radio" name="current_status" value="I want to start but don’t know where to begin">
                 I want to start but don’t know where to begin</label>
-            <label><input type="checkbox" name="current_status[]" value="I’ve never considered collecting until now">
+            <label><input type="radio" name="current_status" value="I’ve never considered collecting until now">
                 I’ve never considered collecting until now</label>
         </div>
 
