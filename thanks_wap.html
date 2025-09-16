@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanks</title>
+    <style>
+        .text_pc {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            font-size: 100%;
+        }
+
+        .text_mb {
+            position: absolute;
+            text-align: center;
+            left: 10%;
+            width: 80%;
+            font-size: 300%;
+        }
+    </style>
+</head>
+<body style="background-image:url('static/back.png')">
+
+<div style="
+        width: 100%;
+        top:5%;
+        position: absolute;
+        font-size: 250%;
+    ">
+
+        <div
+                onclick="onClickHome()"
+                style="
+                    position: absolute;
+                    transform: translateX(-50%) translateY(-50%);
+                    display: inline-block;
+                    color: #ffffff;
+                    left:25%;
+                    font-family: Garamond,serif;
+                    font-weight: bold;
+        ">
+            Home
+            <a href="/" id="home"></a>
+        </div>
+
+        <div
+                onclick="onClickAbout()"
+                style="
+                    position: absolute;
+                    transform: translateX(50%) translateY(-50%);
+                    display: inline-block;
+                    color: #ffffff;
+                    right: 25%;
+                    font-family: Garamond,serif;
+                    font-weight: bold;
+        ">
+            About
+        </div>
+
+    </div>
+
+
+<div
+        style="
+            color: #ffffff;
+            position: absolute;
+            top:25%;
+            transform:  translateY(-50%);
+            width: 100%;
+            font-size: 150%;
+">
+
+    <div
+            id="thanks"
+            class="text_pc"
+    >
+        You can expect to hear from us in a few weeks.
+        Please note that there may be a delay in our response.
+        Thank you for your patience.
+        We look forward to welcoming you to the community soon.
+    </div>
+
+</div>
+<a href="/about_wap" id="about_a"></a>
+<a href="/index_wap" id="home_a"></a>
+
+<script>
+    function isMobileDevice() {
+        const hasTouchEvents = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        const userAgent = navigator.userAgent.toLowerCase();
+        const mobileKeywords = [
+            'android', 'iphone', 'ipad', 'ipod', 'windows phone',
+            'blackberry', 'tablet', 'mobile'
+        ];
+        const hasMobileKeyword = mobileKeywords.some(keyword => userAgent.includes(keyword));
+        return hasTouchEvents && hasMobileKeyword;
+    }
+
+    function onClickAbout() {
+        const aboutObj = document.getElementById('about_a');
+        aboutObj.click();
+    }
+
+    function onClickHome() {
+        const homeObj = document.getElementById('home_a');
+        homeObj.click();
+    }
+
+
+    function setTextSize() {
+        const isMobile = isMobileDevice();
+        if (!isMobile) return;
+        // 修改id="thanks" 的div 的class 为text_mb
+        const thanksElement = document.getElementById('thanks');
+        thanksElement.classList.remove('text_pc');
+        thanksElement.classList.add('text_mb');
+
+    }
+
+    window.onload = () => {
+        setTextSize();
+    };
+</script>
+
+</body>
+</html>
